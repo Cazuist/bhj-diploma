@@ -7,7 +7,7 @@ const createRequest = (options = {}) => {
   const data = options.data;
   let url = options.url;
 
-  if ( Object.hasOwnProperty('headers') ) {
+  if ( options.hasOwnProperty('headers') ) {
     for (let header in headers) {
       xhr.setRequestHeader(header, headers[header]);
     }

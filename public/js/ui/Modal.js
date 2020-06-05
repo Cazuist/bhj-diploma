@@ -19,7 +19,7 @@ class Modal {
     });
   }
 
-  onClose(event) {    
+  onClose(element) {    
     return () => {
       this.close();
       };    

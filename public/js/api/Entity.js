@@ -28,7 +28,7 @@ class Entity {
 
   static get( id = '', data, callback = f => f ) {
     const options = {
-      data: Object.assign({id}, {_method: 'DELETE'}, data),
+      data: Object.assign({id}, data),
       url: this.URL,
       method: 'GET',
       callback, 

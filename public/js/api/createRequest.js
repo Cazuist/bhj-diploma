@@ -39,10 +39,10 @@ const createRequest = (options = {}) => {
     }
 
     xhr.onload = function() {
-      if(xhr.status === 200) {
-        options.callback(null, xhr.response)
+      if(this.status === 200 && this.response.success) {
+        options.callback(null, this.response);
       } else {
-        options.callback(xhr.response.error, null);
+        options.callback(this.response.error);
       }
     }
 
